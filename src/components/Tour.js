@@ -19,14 +19,14 @@ function Tour({ tour, deleteTour }) {
         {showMore ? (
           <>
             {tour.info}
-            <button id={`see-more-${tour.id}`} onClick={toggleInfo}>
+            <button id={`see-less-${tour.id}`} onClick={toggleInfo}>
               Show less
             </button>
           </>
         ) : (
           <>
             {tour.info.slice(0, 200)}...
-            <button id={`see-less-${tour.id}`} onClick={toggleInfo}>
+            <button id={`see-more-${tour.id}`} onClick={toggleInfo}>
               Show more
             </button>
           </>
