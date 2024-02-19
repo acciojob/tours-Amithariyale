@@ -15,18 +15,22 @@ function Tour({ tour, deleteTour }) {
         <p>{tour.name}</p>
         <p>{tour.price}</p>
       </div>
-      {showMore ? (
-        <div>
-          {tour.info}
-          <button onClick={toggleInfo}>Show less</button>
-        </div>
-      ) : (
-        <div>
-          {tour.info.slice(0, 20)}...
-          <button onClick={toggleInfo}>Show more</button>
-        </div>
-      )}
-      <button onClick={handleDelete}>Delete</button>
+      <div id={`tour-item-para-${tour.id}`}>
+        {showMore ? (
+          <>
+            {tour.info}
+            <button onClick={toggleInfo}>Show less</button>
+          </>
+        ) : (
+          <>
+            {tour.info.slice(0, 200)}...
+            <button onClick={toggleInfo}>Show more</button>
+          </>
+        )}
+      </div>
+      <button id={`delete-btn-${tour.id}`} onClick={handleDelete}>
+        Delete
+      </button>
     </div>
   );
 }
