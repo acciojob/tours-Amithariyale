@@ -20,14 +20,14 @@ function Tour({ tour, deleteTour }) {
           <>
             {tour.info}
             <button id={`see-less-${tour.id}`} onClick={toggleInfo}>
-              Show less
+              See less
             </button>
           </>
         ) : (
           <>
             {tour.info.slice(0, 200)}...
             <button id={`see-more-${tour.id}`} onClick={toggleInfo}>
-              Show more
+              See more
             </button>
           </>
         )}
